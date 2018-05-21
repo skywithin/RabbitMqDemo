@@ -12,13 +12,27 @@ namespace Receiver
     {
         static void Main(string[] args)
         {
-            using (var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest"))
+            using (var bus = RabbitHutch.CreateBus(
+                GetConnectionString(),
+                registerServices: x => { }))
             {
                 bus.Subscribe<TextMessage>("testSubscription", HandleTextMessage);
 
                 Console.WriteLine("Listening for messages. Press [return] to exit.");
                 Console.ReadLine();
             }
+        }
+
+        static string GetConnectionString()
+        {
+            return string.Format(
+                "host={0}:{1};virtualHost={2};username={3};password={4};requestedHeartbeat={5};publisherConfirms=true",
+                "localhost", //mq cluster:"mqTest01,mqTest02"
+                5672, //port
+                "/",
+                "guest",
+                "guest",
+                0); //requestedHeartbeat
         }
 
         static void HandleTextMessage(TextMessage textMessage)

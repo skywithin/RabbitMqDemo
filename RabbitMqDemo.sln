@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sender", "Sender\Sender.csproj", "{C364AA19-4BA0-470B-91E4-0651B55EC623}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sender", "Sender\Sender.csproj", "{C364AA19-4BA0-470B-91E4-0651B55EC623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receiver", "Receiver\Receiver.csproj", "{234B0FDE-E8CC-4BE3-B750-D4504B8848D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Receiver", "Receiver\Receiver.csproj", "{234B0FDE-E8CC-4BE3-B750-D4504B8848D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{2537CBF6-663A-4D7C-88D5-2DC326F82DC3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{85FD3A07-4CD7-4380-A625-2EB094D472A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{2537CBF6-663A-4D7C-88D5-2DC326F82DC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{2537CBF6-663A-4D7C-88D5-2DC326F82DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2537CBF6-663A-4D7C-88D5-2DC326F82DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2537CBF6-663A-4D7C-88D5-2DC326F82DC3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85FD3A07-4CD7-4380-A625-2EB094D472A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85FD3A07-4CD7-4380-A625-2EB094D472A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85FD3A07-4CD7-4380-A625-2EB094D472A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85FD3A07-4CD7-4380-A625-2EB094D472A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

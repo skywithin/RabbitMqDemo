@@ -27,6 +27,18 @@ namespace Sender
             Console.ReadLine();
         }
 
+        static string GetConnectionString()
+        {
+            return string.Format(
+                "host={0}:{1};virtualHost={2};username={3};password={4};requestedHeartbeat={5};publisherConfirms=true",
+                "localhost", //mq cluster:"mqTest01,mqTest02"
+                5672, //port
+                "/",
+                "guest",
+                "guest",
+                0); //requestedHeartbeat
+        }
+
         static void TryPublishWithLimitedRetries(TextMessage msg)
         {
             int[] delaysInMilliseconds = new[] { 1000, 2000, 4000 };
@@ -35,7 +47,9 @@ namespace Sender
             {
                 try
                 {
-                    using (var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest"))
+                    using (var bus = RabbitHutch.CreateBus(
+                        GetConnectionString(),
+                        registerServices: x => { }))
                     {
                         bus.Publish(msg);
                     }
